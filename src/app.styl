@@ -13,6 +13,10 @@ color-three = #aee86a
 color-three-light = #ddf8be
 color-three-dark = #6fb321
 
+centerpage()
+  max-width 1000px
+  margin 0 auto
+
 body
   font-family 'Open Sans', Helvetica, Arial, sans-serif
   margin 0
@@ -21,10 +25,9 @@ h1
   font-family 'Raleway', Helvetica, Arial, sans-serif
 
 .header
+  centerpage()
   position relative
   height 100px
-  max-width 1000px
-  margin 0 auto
   background-color #fff
 
   .site-title
@@ -64,12 +67,11 @@ h1
   background-repeat repeat-x
 
 .body
+  centerpage()
   display flex
   flex-flow row wrap
   justify-content space-around
   align-content flex-start
-  max-width 1000px
-  margin 0 auto
 
   .body-block
     padding 10px 20px
