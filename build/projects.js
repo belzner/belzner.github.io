@@ -14,9 +14,7 @@
   SingleProject = React.createFactory(React.createClass({
     render: function() {
       return D.div({
-        className: cx({
-          'body-circle': true
-        })
+        className: 'entry'
       });
     }
   }));
@@ -25,7 +23,7 @@
     render: function() {
       var i, p;
       return D.div.apply(D, [{
-        className: 'body'
+        className: 'body block-display'
       }].concat(slice.call((function() {
         var j, len, results;
         results = [];

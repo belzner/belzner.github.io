@@ -6,15 +6,12 @@ cx = require 'classnames'
 projectsList = require './projectsList'
 
 SingleProject = React.createFactory React.createClass
-
   render: ->
-    D.div {className: cx {
-      'body-circle': true
-    }}
+    D.div {className: 'entry'}
 
 Projects = React.createClass
   render: ->
-    D.div {className: 'body'},
+    D.div {className: 'body block-display'},
       (
         for p in projectsList
           SingleProject {data: p}

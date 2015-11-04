@@ -6,17 +6,12 @@ cx = require 'classnames'
 classesList = require './classesList'
 
 SingleClass = React.createFactory React.createClass
-  getInitialState: ->
-    collapsed: true
-
   render: ->
-    D.div {className: cx {
-      'body-circle': true
-    }}
+    D.div {className: 'entry'}
 
 Classes = React.createClass
   render: ->
-    D.div {className: 'body'},
+    D.div {className: 'body block-display'},
       (
         for c in classesList
           SingleClass {data: c}

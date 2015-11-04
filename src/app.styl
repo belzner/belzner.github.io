@@ -73,23 +73,7 @@ h1
   justify-content space-around
   align-content flex-start
 
-  .body-block
-    padding 10px 20px
-
-  .body-circle
-    margin 40px
-    width 150px
-    height @width
-    border-radius 50%
-    flex 0 0 auto
-
-  .filler
-    margin 0 40px
-    width 150px
-    flex 0 0 auto
-
-  .body-block
-  .body-circle
+  .entry
     &:nth-child(3n+1)
       background-color color-one
 
@@ -106,3 +90,41 @@ h1
         white-space nowrap
         overflow hidden
         text-overflow ellipsis
+
+.block-display
+  .entry
+  .filler
+    margin 0px
+    flex 0 0 auto
+
+  .entry:before
+    content ""
+    display block
+    padding-top 100%
+
+@media screen and (max-width: 450px)
+  .entry
+  .filler
+    width 100%
+
+@media screen and (min-width: 450px)
+  .entry
+  .filler
+    width 50%
+
+@media screen and (min-width: 900px)
+  .entry
+  .filler
+    width 25%
+
+.circle-display
+  .entry
+  .filler
+    margin 35px
+    width 160px
+    height @width
+    border-radius 50%
+    flex 0 0 auto
+
+.filler
+  height 0
