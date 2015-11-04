@@ -83,7 +83,9 @@
     render: function() {
       return D.div({
         className: 'entry'
-      });
+      }, D.div({
+        className: 'entry-inner'
+      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc)));
     }
   }));
 

@@ -77,11 +77,20 @@ h1
     &:nth-child(3n+1)
       background-color color-one
 
+      &:after
+        background linear-gradient(transparent, color-one)
+
     &:nth-child(3n+2)
       background-color color-two
 
+      &:after
+        background linear-gradient(transparent, color-two)
+
     &:nth-child(3n+3)
       background-color color-three
+
+      &:after
+        background linear-gradient(transparent, color-three)
       
     &.short
       height 100px
@@ -94,6 +103,8 @@ h1
 .block-display
   .entry
   .filler
+    position relative
+    overflow hidden
     margin 0px
     flex 0 0 auto
 
@@ -101,6 +112,30 @@ h1
     content ""
     display block
     padding-top 100%
+
+  .entry:after
+    content ""
+    position absolute
+    top 50%
+    bottom 0
+    left @bottom
+    right @bottom
+
+  .entry-inner
+    position absolute
+    top 10px
+    bottom @top*2
+    left @bottom
+    right @left
+
+    h3
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+
+    p
+      overflow hidden
+      text-overflow ellipsis
 
 @media screen and (max-width: 450px)
   .entry
