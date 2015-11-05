@@ -1,17 +1,23 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400')
 @import url('http://fonts.googleapis.com/css?family=Raleway:400,700')
 
-color-one = #54b980
-color-one-light = #b3eacb
-color-one-dark = #1a8d4c
+colors = #54b980 #5089a5 #aee86a
+colors-light = #b3eacb #b2d4e4 #ddf8be
+colors-dark = #1a8d4c #1c5d7d #6fb321
 
-color-two = #5089a5
-color-two-light = #b2d4e4
-color-two-dark = #1c5d7d
+linkcolors(cur,total)
+  &:nth-child({total}n+{cur})
+    color colors-dark[cur - 1]
 
-color-three = #aee86a
-color-three-light = #ddf8be
-color-three-dark = #6fb321
+    &:hover
+      color colors-light[cur - 1]
+
+blockcolors(cur,total)
+  &:nth-child({total}n+{cur})
+    background-color colors[cur - 1]
+
+    &:after
+      background linear-gradient(transparent 10%, colors[cur - 1])
 
 centerpage()
   max-width 1000px
@@ -42,24 +48,9 @@ h1
     .menubar-link
       padding 10px
       text-decoration none
-
-      &:nth-child(3n+1)
-        color color-one-dark
-      
-        &:hover
-          color color-one-light
-      
-      &:nth-child(3n+2)
-        color color-two-dark
-      
-        &:hover
-          color color-two-light
-      
-      &:nth-child(3n+3)
-        color color-three-dark
-
-        &:hover
-          color color-three-light
+      linkcolors(1,3)
+      linkcolors(2,3)
+      linkcolors(3,3)
 
 .header-border
   height 10px
@@ -74,24 +65,10 @@ h1
   align-content flex-start
 
   .entry
-    &:nth-child(3n+1)
-      background-color color-one
+    blockcolors(1,3)
+    blockcolors(2,3)
+    blockcolors(3,3)
 
-      &:after
-        background linear-gradient(transparent, color-one)
-
-    &:nth-child(3n+2)
-      background-color color-two
-
-      &:after
-        background linear-gradient(transparent, color-two)
-
-    &:nth-child(3n+3)
-      background-color color-three
-
-      &:after
-        background linear-gradient(transparent, color-three)
-      
     &.short
       height 100px
       
@@ -116,7 +93,7 @@ h1
   .entry:after
     content ""
     position absolute
-    top 50%
+    top 25%
     bottom 0
     left @bottom
     right @bottom
