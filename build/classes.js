@@ -12,12 +12,52 @@
   classesList = require('./classesList');
 
   SingleClass = React.createFactory(React.createClass({
-    render: function() {
+    getInitialState: function() {
+      return {
+        isOpen: false
+      };
+    },
+    renderLarge: function() {
+      return D.div({
+        className: 'large'
+      }, D.div({
+        className: 'large-inner'
+      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc)), D.p({
+        className: 'exit',
+        onClick: (function(_this) {
+          return function() {
+            return _this.switchOpen(false);
+          };
+        })(this)
+      }, D.i({
+        className: 'fa fa-close fa-2x'
+      })));
+    },
+    renderSmall: function() {
       return D.div({
         className: 'entry'
       }, D.div({
         className: 'entry-inner'
-      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc)));
+      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc)), D.p({
+        className: 'more',
+        onClick: (function(_this) {
+          return function() {
+            return _this.switchOpen(true);
+          };
+        })(this)
+      }, 'More'));
+    },
+    switchOpen: function(to) {
+      return this.setState({
+        isOpen: to
+      });
+    },
+    render: function() {
+      if (this.state.isOpen) {
+        return this.renderLarge();
+      } else {
+        return this.renderSmall();
+      }
     }
   }));
 

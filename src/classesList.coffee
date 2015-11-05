@@ -1,5 +1,45 @@
 module.exports = [
   {
+    type: "esp splark",
+    title: "Interactive Introduction to the Internet",
+    desc: "Ever wondered what happens when you type 'esp.mit.edu' into your address bar? In this class, you'll get to act out the protocols that underlie everything you do on the internet, from 802.11 to TCP to DNS. Learn what makes the World Wide Web tick!",
+    semester: "Spring 2015",
+    length: "1 hour",
+    grade: "7th-8th"
+  }
+  {
+    type: "esp splark",
+    title: "Con(structed) Lang(uages)",
+    desc: "Saluton! \u0108u vi parolas Esperanton? Conlangs (such as Esperanto, lojban, and many more) are languages which have been deliberately invented for a variety of purposes, ranging from simplifying communication to creating more vivid fictional worlds for stories. Learn a bit about the history of conlanging and some example conlangs, and explore what it takes to design your own language!",
+    semester: "Spring 2015",
+    length: "2 hours",
+    grade: "7th-8th"
+  }
+  {
+    type: "esp splark",
+    title: "How to Speak Machine",
+    desc: "Coders, Assemble! What are we assembling? Why, programs of course! An assembly language is a low-level programming language with a strong (or one-to-one) correspondence with the actual machine-readable instructions. This class will cover the structure of a simplified machine instruction set by writing some small programs and exploring how they're interpreted by the machine.",
+    semester: "Fall 2014",
+    length: "2 hours",
+    grade: "9th-12th"
+  }
+  {
+    type: "esp splark",
+    title: "A Brief History of the English Language",
+    desc: "Did you know that differences between the name of an animal versus the name of its meat (cow, beef) are the result of the Norman conquest of 11th century England? Or that the pronunciation of some vowels changed dramatically between the 14th and 18th centuries, in an event known as the Great Vowel Shift? Learn about these and many other fascinating events in the history of English, and get a glimpse into the ways all languages evolve with time.",
+    semester: "Fall 2014",
+    length: "1 hour",
+    grade: "9th-12th"
+  }
+  {
+    type: "esp splark",
+    title: "Fundamentals of Web Design",
+    desc: "There are plenty of terrible websites out there - how do you make sure yours isn't one of them? This class will talk about some of the considerations that go into designing a website - or designing anything - and provide a crash course in everything from aesthetics to typography to user experience.",
+    semester: "Fall 2014",
+    length: "1 hour",
+    grade: "9th-12th"
+  }
+  {
     type: "esp hssp",
     title: "Web Design for Fun and Profit!",
     desc: "You're the newest employee of HSSPweb (the world's leading web design company), and it's time to get to work! Learn the basics of web design, from HTML to CSS to Javascript and more. Then put your new knowledge to work in a series of design tasks, culminating in the creation of a website for a (fictional) company that has hired HSSPweb to design their site!",

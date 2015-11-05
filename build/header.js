@@ -26,7 +26,7 @@
       }, 'Home'), Link({
         to: 'classes',
         className: 'menubar-link'
-      }, 'Classes'), Link({
+      }, 'Teaching'), Link({
         to: 'projects',
         className: 'menubar-link'
       }, 'Projects'), D.a({
