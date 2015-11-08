@@ -14,15 +14,29 @@
   SingleProject = React.createFactory(React.createClass({
     render: function() {
       return D.div({
-        className: 'entry'
-      });
+        className: 'block'
+      }, D.div({
+        className: 'inner'
+      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Made in ', this.props.data.time, '.'), (this.props.data.link ? D.p({}, D.b({}, 'Links: '), D.span({
+        dangerouslySetInnerHTML: {
+          __html: this.props.data.link
+        }
+      })) : void 0)));
     }
   }));
 
   Projects = React.createClass({
     render: function() {
       var i, p;
-      return D.div.apply(D, [{
+      return D.div({
+        className: 'projects'
+      }, D.div({
+        className: 'intro'
+      }, D.h2({}, 'I ', D.span({
+        className: 'highlight'
+      }, 'make'), ' things.'), D.p({}, "Since I started teaching myself how to program at the beginning of high school, ", "I've worked on several small projects at various times and in various contexts. ", "The examples listed below represent some of these projects, ranging from client ", "websites to personal websites to research-focused and competition-focused projects.")), D.div({
+        className: 'border'
+      }), D.div.apply(D, [{
         className: 'body block-display'
       }].concat(slice.call((function() {
         var j, len, results;
@@ -43,7 +57,7 @@
           }));
         }
         return results;
-      })())));
+      })()))));
     }
   });
 

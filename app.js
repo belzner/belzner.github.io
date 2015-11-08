@@ -84,7 +84,7 @@
       return D.div({
         className: 'entry'
       }, D.div({
-        className: 'entry-inner'
+        className: 'inner'
       }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc)), D.p({
         className: 'more',
         onClick: (function(_this) {
@@ -109,7 +109,7 @@
           backgroundColor: this.getColor()
         }
       }, D.div({
-        className: 'large-inner'
+        className: 'inner'
       }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Taught in ', this.props.data.semester, ' for ', this.props.data.grade, ' students at ', this.props.data.type, '.'), (this.props.data.excerpt ? D.p({}, D.b({}, 'Fun Fact: '), this.props.data.excerpt) : void 0), (this.props.data.materials ? D.p({}, D.b({}, 'Materials: '), D.span({
         dangerouslySetInnerHTML: {
           __html: this.props.data.materials
@@ -453,15 +453,29 @@
   SingleProject = React.createFactory(React.createClass({
     render: function() {
       return D.div({
-        className: 'entry'
-      });
+        className: 'block'
+      }, D.div({
+        className: 'inner'
+      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Made in ', this.props.data.time, '.'), (this.props.data.link ? D.p({}, D.b({}, 'Links: '), D.span({
+        dangerouslySetInnerHTML: {
+          __html: this.props.data.link
+        }
+      })) : void 0)));
     }
   }));
 
   Projects = React.createClass({
     render: function() {
       var i, p;
-      return D.div.apply(D, [{
+      return D.div({
+        className: 'projects'
+      }, D.div({
+        className: 'intro'
+      }, D.h2({}, 'I ', D.span({
+        className: 'highlight'
+      }, 'make'), ' things.'), D.p({}, "Since I started teaching myself how to program at the beginning of high school, ", "I've worked on several small projects at various times and in various contexts. ", "The examples listed below represent some of these projects, ranging from client ", "websites to personal websites to research-focused and competition-focused projects.")), D.div({
+        className: 'border'
+      }), D.div.apply(D, [{
         className: 'body block-display'
       }].concat(slice.call((function() {
         var j, len, results;
@@ -482,7 +496,7 @@
           }));
         }
         return results;
-      })())));
+      })()))));
     }
   });
 
@@ -495,15 +509,19 @@
 (function() {
   module.exports = [
     {
+      title: "JSim Netlist Expander",
+      desc: "I designed this small web app to help students in MIT's 6.004 Computation Structures class understand the syntax of the circuit description language (JSim) that the class used for labs. It showed how iterators (a shorthand for adding multiple components in one line) expanded to create the full component list, so students could understand how the wires were connected in a large circuit.",
+      time: "Fall 2014",
+      link: '<a href="https://github.com/belzner/jsimTools">Git Repo</a>'
+    }, {
       title: "Pixelicity",
-      desc: "\"As you explore your city in the real world, you're building it in Pixelicity. Construct buildings, collect achievements, meet residents, and get to know the place you live.\" This website was created over the course of one month as part of MIT's 6.470 Web Programming Competition, and received an honorable mention as well as the Most Unique Concept award.",
+      desc: "\"As you explore your city in the real world, you're building it in Pixelicity. Construct buildings, collect achievements, meet residents, and get to know the place you live.\" I created this website over the course of one month as part of MIT's 6.470 Web Programming Competition, and received an honorable mention as well as the Most Unique Concept award.",
       time: "January 2014",
-      link: '<a href="http://pixelicity.heroku.com/">Website</a>'
+      link: '<a href="http://pixelicity.heroku.com/">Website</a>, <a href="https://github.com/belzner/pixelicity">Git Repo</a>'
     }, {
       title: "Flourish Academic Enrichment",
       desc: "Flourish is a small startup organization which offers innovative educational programming for middle and high school students, primarily those in the Ohio area. I developed the outward-facing website for connecting with students and teachers, and created various internal tools for use by the program administrators.",
-      time: "2012-2013",
-      link: '<a href="http://flourishacademics.org/">Website</a>'
+      time: "2012-2013"
     }, {
       title: "Language Acquisition in Computers",
       desc: "As part of the 2011-2012 New Mexico Supercomputing Challenge, I worked in a team of two to design and implement algorithms for self-directed natural language learning and processing in AI systems. We were named finalists, and received the Creativity and Innovation award and the Best Written Report award.",

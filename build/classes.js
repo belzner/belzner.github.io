@@ -16,7 +16,7 @@
       return D.div({
         className: 'entry'
       }, D.div({
-        className: 'entry-inner'
+        className: 'inner'
       }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc)), D.p({
         className: 'more',
         onClick: (function(_this) {
@@ -41,7 +41,7 @@
           backgroundColor: this.getColor()
         }
       }, D.div({
-        className: 'large-inner'
+        className: 'inner'
       }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Taught in ', this.props.data.semester, ' for ', this.props.data.grade, ' students at ', this.props.data.type, '.'), (this.props.data.excerpt ? D.p({}, D.b({}, 'Fun Fact: '), this.props.data.excerpt) : void 0), (this.props.data.materials ? D.p({}, D.b({}, 'Materials: '), D.span({
         dangerouslySetInnerHTML: {
           __html: this.props.data.materials

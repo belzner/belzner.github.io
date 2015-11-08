@@ -8,7 +8,7 @@ classesList = require './classesList'
 DisplayBlock = React.createFactory React.createClass
   render: ->
     D.div {className: 'entry'},
-      D.div {className: 'entry-inner'},
+      D.div {className: 'inner'},
         D.h3 {}, @props.data.title
         D.p {}, @props.data.desc
       D.p {className: 'more', onClick: => @props.cb @props.id}, 'More'
@@ -20,7 +20,7 @@ DisplayFull = React.createFactory React.createClass
 
   render: ->
     D.span {className: 'large', style: {backgroundColor: @getColor()}},
-      D.div {className: 'large-inner'},
+      D.div {className: 'inner'},
         D.h3 {}, @props.data.title
         D.p {}, @props.data.desc
         D.p {},
