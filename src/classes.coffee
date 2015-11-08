@@ -57,7 +57,7 @@ Classes = React.createClass
         D.p {},
           'Freshman year at MIT, I joined the '
           D.a {href: 'https://esp.mit.edu/about/index.html'}, 'Educational Studies Program'
-          ' (ESP), and have since developed taught over 50 hours of classes to hundreds of middle '
+          ' (ESP), and have since developed and taught over 50 hours of classes to hundreds of middle '
           'and high school students from the Boston area and beyond. My classes, like my interests, '
           'cover a wide range of topics from linguistics to web design to computer networking and systems. '
           'I\'ve also taught a handful of classes outside of ESP, through the '
