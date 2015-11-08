@@ -31,7 +31,7 @@
   DisplayFull = React.createFactory(React.createClass({
     getColor: function() {
       var colors;
-      colors = ['#54b980', '#5089a5', '#aee86a'];
+      colors = ['#b3eacb', '#b2d4e4', '#ddf8be'];
       return colors[this.props.id % 3];
     },
     render: function() {
@@ -42,7 +42,11 @@
         }
       }, D.div({
         className: 'large-inner'
-      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Taught in ', this.props.data.semester, ' for ', this.props.data.grade, ' grade students.')), D.p({
+      }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Taught in ', this.props.data.semester, ' for ', this.props.data.grade, ' students at ', this.props.data.type, '.'), (this.props.data.excerpt ? D.p({}, D.b({}, 'Fun Fact: '), this.props.data.excerpt) : void 0), (this.props.data.materials ? D.p({}, D.b({}, 'Materials: '), D.span({
+        dangerouslySetInnerHTML: {
+          __html: this.props.data.materials
+        }
+      })) : void 0)), D.p({
         className: 'exit',
         onClick: (function(_this) {
           return function() {
@@ -68,7 +72,21 @@
     },
     render: function() {
       var i;
-      return D.div.apply(D, [{
+      return D.div({
+        className: 'classes'
+      }, D.div({
+        className: 'intro'
+      }, D.h2({}, 'I ', D.span({
+        className: 'highlight'
+      }, 'teach'), ' things.'), D.p({}, 'Freshman year at MIT, I joined the ', D.a({
+        href: 'https://esp.mit.edu/about/index.html'
+      }, 'Educational Studies Program'), ' (ESP), and have since developed taught over 50 hours of classes to hundreds of middle ', 'and high school students from the Boston area and beyond. My classes, like my interests, ', 'cover a wide range of topics from linguistics to web design to computer networking and systems. ', 'I\'ve also taught a handful of classes outside of ESP, through the ', D.a({
+        href: 'http://www.cee.org/research-science-institute'
+      }, 'Research Science Institute'), ' (RSI) and the ', D.a({
+        href: 'https://sipb.mit.edu/iap/'
+      }, 'Student Information Processing Board'), ' (SIPB).'), D.p({}, "Click on 'more' below each class to learn more about it!")), D.div({
+        className: 'border'
+      }), D.div.apply(D, [{
         className: 'body block-display'
       }].concat(slice.call((function() {
         var j, ref, results;
@@ -102,7 +120,7 @@
           }));
         }
         return results;
-      })())));
+      })()))));
     }
   });
 

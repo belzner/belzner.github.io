@@ -39,7 +39,7 @@
         className: 'menubar-link fa fa-github',
         href: 'https://github.com/belzner'
       }))), D.div({
-        className: 'header-border'
+        className: 'border'
       }));
     }
   });

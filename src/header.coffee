@@ -16,6 +16,6 @@ Header = React.createClass
           D.a {className: 'menubar-link fa fa-envelope-o', href: 'mailto:belzner@mit.edu'}
           D.a {className: 'menubar-link fa fa-linkedin', href: 'https://www.linkedin.com/in/meganbelzner'}
           D.a {className: 'menubar-link fa fa-github', href: 'https://github.com/belzner'}
-      D.div {className: 'header-border'}
+      D.div {className: 'border'}
 
 module.exports = Header
