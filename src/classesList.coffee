@@ -1,5 +1,14 @@
 module.exports = [
   {
+    type: "ESP Splash",
+    title: "How Computer Systems Break",
+    desc: "It's been said that \"complex systems break in complex ways\", and computer systems are getting more and more complex every day. So how do they break? What can go wrong when they do? And what happens when someone tries to exploit these errors? We'll take a look at some major system failures over the past several decades, how they could have been avoided, and why building an infallible computer system is so hard.",
+    semester: "Fall 2015",
+    length: "1 hour",
+    grade: "10th-12th grade"
+    excerpt: "Exploiting an error in a system doesn't even need to involve writing any code. The hacking of journalist Mat Honan's Twitter account in 2012 provides a good case study of this - the attackers were ultimately able to gain access to his Twitter account through a chain of password resets (Amazon, then Apple, then Google, then finally Twitter), with only a few phone calls, a fake credit card number, and a little ingenuity."
+  }
+  {
     type: "ESP Spark",
     title: "Interactive Introduction to the Internet",
     desc: "Ever wondered what happens when you type 'esp.mit.edu' into your address bar? In this class, you'll get to act out the protocols that underlie everything you do on the internet, from 802.11 to TCP to DNS. Learn what makes the World Wide Web tick!",
