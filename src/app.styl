@@ -22,6 +22,10 @@ blockcolors(cur,total)
     .more:hover
       color colors-light[cur - 1]
 
+lightcolors(cur,total)
+  &:nth-of-type({total}n+{cur})
+    background-color colors-light[cur - 1]
+
 centerpage()
   max-width 1000px
   margin 0 auto
@@ -77,6 +81,11 @@ h1
     blockcolors(1,3)
     blockcolors(2,3)
     blockcolors(3,3)
+    
+    &.light
+      lightcolors(1,3)
+      lightcolors(2,3)
+      lightcolors(3,3)
 
 .intro
   width 100%

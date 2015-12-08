@@ -6,8 +6,19 @@ cx = require 'classnames'
 projectsList = require './projectsList'
 
 SingleProject = React.createFactory React.createClass
+  getInitialState: ->
+    isLight: false
+
+  switchIsLight: -> @setState {isLight: !@state.isLight}
+
   render: ->
-    D.div {className: 'block'},
+    D.div {
+      className: cx {
+        'block': true
+        'light': @state.isLight
+      }
+      onClick: @switchIsLight
+    },
       D.div {className: 'inner'},
         D.h3 {}, @props.data.title
         D.p {}, @props.data.desc
@@ -32,6 +43,8 @@ Projects = React.createClass
           "I've worked on several small projects at various times and in various contexts. "
           "The examples listed below represent some of these projects, ranging from client "
           "websites to personal websites to research-focused and competition-focused projects."
+        D.p {},
+          "Background colors too dark to read on? Click on a project to lighten the background!"
       D.div {className: 'border'}
       D.div {className: 'body block-display'},
         (

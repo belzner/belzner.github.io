@@ -469,9 +469,23 @@
   projectsList = require('./projectsList');
 
   SingleProject = React.createFactory(React.createClass({
+    getInitialState: function() {
+      return {
+        isLight: false
+      };
+    },
+    switchIsLight: function() {
+      return this.setState({
+        isLight: !this.state.isLight
+      });
+    },
     render: function() {
       return D.div({
-        className: 'block'
+        className: cx({
+          'block': true,
+          'light': this.state.isLight
+        }),
+        onClick: this.switchIsLight
       }, D.div({
         className: 'inner'
       }, D.h3({}, this.props.data.title), D.p({}, this.props.data.desc), D.p({}, 'Made in ', this.props.data.time, '.'), (this.props.data.link ? D.p({}, D.b({}, 'Links: '), D.span({
@@ -491,7 +505,7 @@
         className: 'intro'
       }, D.h2({}, 'I ', D.span({
         className: 'highlight'
-      }, 'make'), ' things.'), D.p({}, "Since I started teaching myself how to program at the beginning of high school, ", "I've worked on several small projects at various times and in various contexts. ", "The examples listed below represent some of these projects, ranging from client ", "websites to personal websites to research-focused and competition-focused projects.")), D.div({
+      }, 'make'), ' things.'), D.p({}, "Since I started teaching myself how to program at the beginning of high school, ", "I've worked on several small projects at various times and in various contexts. ", "The examples listed below represent some of these projects, ranging from client ", "websites to personal websites to research-focused and competition-focused projects."), D.p({}, "Background colors too dark to read on? Click on a project to lighten the background!")), D.div({
         className: 'border'
       }), D.div.apply(D, [{
         className: 'body block-display'
