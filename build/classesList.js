@@ -2,6 +2,22 @@
 (function() {
   module.exports = [
     {
+      type: "ESP Spark",
+      title: "Copyrights and Copywrongs",
+      desc: "What do you have to be careful of when inventing something new? If you write a book, when are other people allowed to use excerpts from it? Why can't you create a new website and call it 'Google'? The answers to these questions lie in the realm of intellectual property law. In this class, we'll look at how the laws of patents, copyrights, and trademarks play out, both historically and today, through a combination of real cases and interactive simulations.",
+      semester: "Spring 2016",
+      length: "2 hours",
+      grade: "7th-8th grade",
+      excerpt: "Although the patent statutes were intended to be fairly all inclusive in terms of what is patentable, courts typically exclude \"laws of nature, physical phenomena, and abstract ideas\". This came up in a major biotech patent case, Association for Molecular Pathology v. Myriad Genetics, where the Supreme Court ultimately ruled that a DNA sequence (being a product of nature) is not patent eligible, but that cDNA (which has the same sequence, but with non-coding portions removed, and therefore does not occur in nature) is patent eligible."
+    }, {
+      type: "ESP Spark, ESP Splash",
+      title: "Nonsense!",
+      desc: "Explore words like \"antidisestablishmentarianism\" and sentences like those in Lewis Carroll's \"Jabberwocky\" or Dr. Seuss's \"Fox in Socks\". Along the way you'll learn about many of the fascinating properties of language and get a chance to create some \"nonsense\" of your very own!",
+      semester: "Spring 2016, Spring 2014, Spring 2013, Fall 2012",
+      length: "1 hour",
+      grade: "7th-10th grade",
+      excerpt: "Prefixes and suffixes can be added to any word, even one that already has prefixes or suffixes, as long as the word is the correct part of speech. So the noun 'industry' could become the adjective 'industrial', which could become the verb 'industrialize', which could become the noun 'industrialization', which could become the adjective 'industrializational', which eventually becomes 'industrializationalizationalizationalizationalize', a word that still has concrete meaning despite its apparent absurdity."
+    }, {
       type: "ESP Splash",
       title: "How Computer Systems Break",
       desc: "It's been said that \"complex systems break in complex ways\", and computer systems are getting more and more complex every day. So how do they break? What can go wrong when they do? And what happens when someone tries to exploit these errors? We'll take a look at some major system failures over the past several decades, how they could have been avoided, and why building an infallible computer system is so hard.",
@@ -9,6 +25,14 @@
       length: "1 hour",
       grade: "10th-12th grade",
       excerpt: "Exploiting an error in a system doesn't even need to involve writing any code. The hacking of journalist Mat Honan's Twitter account in 2012 provides a good case study of this - the attackers were ultimately able to gain access to his Twitter account through a chain of password resets (Amazon, then Apple, then Google, then finally Twitter), with only a few phone calls, a fake credit card number, and a little ingenuity."
+    }, {
+      type: "Clark University ESP",
+      title: "Telling Secrets: Code Making (and Breaking)",
+      desc: "Suppose you want to tell your friend something, but you don't want anyone else to hear it too. How do you do it? Sometimes, it's harder than it sounds. We'll try out some codes and ciphers from throughout history, and learn how to break them too.",
+      semester: "Spring 2015",
+      length: "1 hour",
+      grade: "5th-8th grade",
+      excerpt: "Though they're commonly used interchangeably, 'code' and 'cipher' actually have distinct meanings. A cipher is a substitution at the level of the individual letters in a word (for example, replacing them with numbers or symbols or different letters), while a code is a substitution at the level of entire words."
     }, {
       type: "ESP Spark",
       title: "Interactive Introduction to the Internet",
@@ -79,14 +103,6 @@
       length: "1 hour",
       grade: "7th-8th grade",
       excerpt: "One of the earliest theories of mind was Descartes' theory of Substance Dualism. This theory says that the mind and body are two separate (but somehow connected) substances. People disagreed with this, claiming that it led to 'overdeterminism', where any given physical event may have both a physical cause and a redundant mental cause, making the mind unnecessary."
-    }, {
-      type: "ESP Spark, ESP Splash",
-      title: "Nonsense!",
-      desc: "Explore words like \"antidisestablishmentarianism\" and sentences like those in Lewis Carroll's \"Jabberwocky\" or Dr. Seuss's \"Fox in Socks\". Along the way you'll learn about many of the fascinating properties of language and get a chance to create some \"nonsense\" of your very own!",
-      semester: "Spring 2014, Spring 2013, Fall 2012",
-      length: "1 hour",
-      grade: "7th-10th grade",
-      excerpt: "Prefixes and suffixes can be added to any word, even one that already has prefixes or suffixes, as long as the word is the correct part of speech. So the noun 'industry' could become the adjective 'industrial', which could become the verb 'industrialize', which could become the noun 'industrialization', which could become the adjective 'industrializational', which eventually becomes 'industrializationalizationalizationalizationalize', a word that still has concrete meaning despite its apparent absurdity."
     }, {
       type: "SIPB IAP",
       title: "Introduction to LaTeX",
