@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>William Belzner</title>
+  <meta name="robots" content="noindex">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <style type="text/css">
+    html {
+      background-color: rgb(123, 120, 101);
+      background-size: cover;
+      background-position: center center;
+      background-image: url('./images/bg-flowers.jpg');
+    }
+
+    .bother {
+      font-family: 'Pacifico', cursive;
+      font-size: 72px;
+      color: #000;
+      text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+      text-align: center;
+      position: relative;
+      top: 40vh;
+      padding: 0 70px;
+    }
+  </style>
+  <script type="text/javascript">
+    function cycle() {
+      var images = [
+        {'name': 'bg-flowers', 'color': 'rgb(123, 120, 101)'},
+        {'name': 'bg-leaves', 'color': 'rgb(59, 34, 38)'},
+        {'name': 'bg-mountain', 'color': 'rgb(45, 46, 52)'},
+        {'name': 'bg-pond', 'color': 'rgb(49, 52, 28)'},
+        {'name': 'bg-rocks', 'color': 'rgb(58, 52, 53)'},
+        {'name': 'bg-snow', 'color': 'rgb(61, 57, 51)'},
+        {'name': 'bg-sunset', 'color': 'rgb(22, 24, 28)'},
+        {'name': 'bg-tree', 'color': 'rgb(49, 51, 42)'},
+        {'name': 'bg-waterfall', 'color': 'rgb(67, 81, 72)'},
+        {'name': 'bg-world', 'color': 'rgb(62, 95, 153)'}
+      ];
+
+      var index = 0;
+      var bgImage = '';
+
+      window.setInterval(function() {
+        bgImage = "url('./images/" + images[index].name + ".jpg')";
+        document.documentElement.style.backgroundColor = images[index].color;
+        document.documentElement.style.backgroundImage = bgImage;
+        index = (index + 1) < images.length ? index + 1 : 0;
+      }, 2000);
+    }
+
+    document.addEventListener("DOMContentLoaded", cycle);
+  </script>
+</head>
+<body>
+  <div class="bother">Don't Bother Me</div>
+</body>
+</html>
