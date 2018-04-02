@@ -8,15 +8,6 @@
       background-color: rgb(123, 120, 101);
       background-size: cover;
       background-position: center center;
-      background-image: url('./images/bg-world.jpg');
-      background-image: url('./images/bg-waterfall.jpg');
-      background-image: url('./images/bg-tree.jpg');
-      background-image: url('./images/bg-sunset.jpg');
-      background-image: url('./images/bg-snow.jpg');
-      background-image: url('./images/bg-rocks.jpg');
-      background-image: url('./images/bg-pond.jpg');
-      background-image: url('./images/bg-mountain.jpg');
-      background-image: url('./images/bg-leaves.jpg');
       background-image: url('./images/bg-flowers.jpg');
     }
 
@@ -45,6 +36,10 @@
         {'name': 'bg-waterfall', 'color': 'rgb(67, 81, 72)'},
         {'name': 'bg-world', 'color': 'rgb(62, 95, 153)'}
       ];
+
+      images.forEach(function(el) {
+        (new Image).src = el.name;
+      });
 
       var index = 0;
       var bgImage = '';
