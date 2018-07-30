@@ -25,6 +25,7 @@ Vue.component('page-header', {
         { title: '', link: 'mailto:megan.belzner@gmail.com', classes: 'fa fa-envelope-o' },
         { title: '', link: 'https://www.linkedin.com/in/meganbelzner', classes: 'fa fa-linkedin' },
         { title: '', link: 'https://github.com/belzner', classes: 'fa fa-github' },
+        { title: '', link: 'https://twitter.com/belznering', classes: 'fa fa-twitter' }
       ]
     };
   }

@@ -2,5 +2,56 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 
 body {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #3d6bb5;
+}
+
+a:hover {
+  color: #6797e5;
+}
+
+.page-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 30px 10px;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.page-header .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.page-header .menu li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.page-header .menu a {
+  text-decoration: none;
+}
+
+.page-header .menu a:hover {
+  text-decoration: underline;
+}
+
+.page-header .menu a.fa:hover {
+  text-decoration: none;
+}
+
+.page-main {
+  padding: 0 40px;
 }
