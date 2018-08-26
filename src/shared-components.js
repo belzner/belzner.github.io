@@ -18,10 +18,10 @@ Vue.component('page-header', {
   data: function () {
     return {
       menuItems: [
-        { title: 'About', link: '/index.html', classes: '' },
-        { title: 'Work', link: '/work.html', classes: '' },
-        { title: 'Teaching', link: '/teaching.html', classes: '' },
-        { title: 'Projects', link: '/projects.html', classes: '' },
+        { title: 'About', link: '#about', classes: '' },
+        { title: 'Work', link: '#work', classes: '' },
+        { title: 'Teaching', link: '#teaching', classes: '' },
+        { title: 'Projects', link: '#projects', classes: '' },
         { title: '', link: 'mailto:megan.belzner@gmail.com', classes: 'fa fa-envelope-o' },
         { title: '', link: 'https://www.linkedin.com/in/meganbelzner', classes: 'fa fa-linkedin' },
         { title: '', link: 'https://github.com/belzner', classes: 'fa fa-github' },

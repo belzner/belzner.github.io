@@ -8,16 +8,43 @@
   <body>
     <div id="app">
       <page-header></page-header>
-      <div class="page-main">{{ message }}</div>
+      <div class="page-main">
+        <page-work v-if="page === 'work'"></page-work>
+        <page-teaching v-else-if="page === 'teaching'"></page-teaching>
+        <page-projects v-else-if="page === 'projects'"></page-projects>
+        <page-about v-else></page-about>
+      </div>
     </div>
+    <script src="./src/shared-components.js"></script>
+    <script src="./src/pages/about.js"></script>
+    <script src="./src/pages/projects.js"></script>
+    <script src="./src/pages/teaching.js"></script>
+    <script src="./src/pages/work.js"></script>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: '#app',
+        data: {
+          page: ''
+        },
+        methods: {
+          handleHashChange: function (event) {
+            let page;
+            const validPages = ['about', 'work', 'teaching', 'projects'];
+            if (window.location.hash) {
+              page = window.location.hash.slice(1);
+            }
+
+            if (!validPages.includes(page)) {
+              page = 'about';
+            }
+
+            this.page = page;
+          }
+        }
+      });
+
+      window.addEventListener('hashchange', app.handleHashChange);
+      app.handleHashChange();
+    </script>
   </body>
-  <script src="./src/shared-components.js"></script>
-  <script type="text/javascript">
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      }
-    });
-  </script>
 </html>
