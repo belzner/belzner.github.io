@@ -52,6 +52,75 @@ a:hover {
   text-decoration: none;
 }
 
-.page-main {
-  padding: 0 40px;
+.page {
+  margin-bottom: 40px;
+}
+
+.section.static, .panel {
+  padding: 10px 40px 30px;
+}
+
+.section .head, .panel .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.section:nth-child(odd) {
+  background-color: #eff1f4;
+}
+
+.section:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.carousel-head {
+  margin: 0;
+  padding: 20px 40px 0;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: inherit;
+}
+
+.carousel-wrapper .arrows {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.carousel-wrapper .arrows .arrow {
+  z-index: 10;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  background-color: inherit;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .panel {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1 0 auto;
+}
+
+.carousel .panel .title {
+  margin-bottom: 1em;
+  margin-top: 0.5em;
 }

@@ -30,3 +30,43 @@ Vue.component('page-header', {
     };
   }
 });
+
+Vue.component('carousel-section', {
+  template: `
+    <div class='section'>
+      <h3 class='carousel-head'><span class="fa fa-angle-double-right"></span> {{ title }}</h3>
+      <div class='carousel-wrapper'>
+        <div class='arrows'>
+          <div class='arrow fa fa-angle-left' v-on:click='moveLeft' v-bind:style='"visibility: " + (this.page > 0 ? "visible" : "hidden")'></div>
+          <div class='arrow fa fa-angle-right' v-on:click='moveRight' v-bind:style='"visibility: " + (this.page < this.panelData.length - 1 ? "visible" : "hidden")'></div>
+        </div>
+        <div class='carousel' v-bind:style='"transform: translateX(-" + (this.page * 100) + "%)"'>
+          <component
+            v-for='(panel, idx) in panelData'
+            v-bind:is='childComponent'
+            v-bind:panel='panel'
+            v-bind:idx='idx'
+          ></component>
+        </div>
+      </div>
+    </div>
+  `,
+  props: [ 'panelData', 'title', 'childComponent' ],
+  data: function () {
+    return {
+      page: 0
+    }
+  },
+  methods: {
+    moveLeft: function(e) {
+      if (this.page > 0) {
+        this.page -= 1;
+      }
+    },
+    moveRight: function(e) {
+      if (this.page < this.panelData.length - 1) {
+        this.page += 1;
+      }
+    }
+  }
+});
