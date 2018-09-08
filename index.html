@@ -7,12 +7,9 @@
   </head>
   <body>
     <div id="app">
-      <page-header></page-header>
+      <page-header v-bind:page='page'></page-header>
       <div class="page-main">
-        <page-work v-if="page === 'work'"></page-work>
-        <page-teaching v-else-if="page === 'teaching'"></page-teaching>
-        <page-projects v-else-if="page === 'projects'"></page-projects>
-        <page-about v-else></page-about>
+        <component v-bind:is='"page-" + this.page'></component>
       </div>
     </div>
     <script src="./src/shared-components.js"></script>

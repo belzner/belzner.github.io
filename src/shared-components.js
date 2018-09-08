@@ -1,6 +1,13 @@
 Vue.component('menu-item', {
-  template: `<li><a :href='item.link' :class='item.classes'>{{ item.title }}</a></li>`,
-  props: [ 'item' ]
+  template: `
+    <li>
+      <a
+        v-bind:href='item.link'
+        v-bind:class='item.classes + (item.link === "#" + this.page ? " active" : "")'
+      >{{ item.title }}</a>
+    </li>
+  `,
+  props: [ 'item', 'page' ]
 });
 
 Vue.component('page-header', {
@@ -11,10 +18,12 @@ Vue.component('page-header', {
         <menu-item
           v-for='item in menuItems'
           v-bind:item='item'
+          v-bind:page='page'
         ></menu-item>
       </ul>
     </div>
   `,
+  props: [ 'page' ],
   data: function () {
     return {
       menuItems: [

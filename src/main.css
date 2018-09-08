@@ -10,7 +10,7 @@ a {
   color: #3d6bb5;
 }
 
-a:hover {
+a:hover, a.active {
   color: #6797e5;
 }
 
@@ -44,7 +44,7 @@ a:hover {
   text-decoration: none;
 }
 
-.page-header .menu a:hover {
+.page-header .menu a:hover, .page-header .menu a.active {
   text-decoration: underline;
 }
 
