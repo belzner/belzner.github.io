@@ -2,11 +2,46 @@
 <html>
   <head>
     <title>Megan Belzner</title>
-    <link rel="stylesheet" type="text/css" href="app.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script src="app.js"></script>
+    <div id="app">
+      <page-header v-bind:page='page'></page-header>
+      <div class="page-main">
+        <component v-if='page' v-bind:is='"page-" + this.page'></component>
+      </div>
+    </div>
+    <script src="./src/shared-components.js"></script>
+    <script src="./src/pages/about.js"></script>
+    <script src="./src/pages/projects.js"></script>
+    <script src="./src/pages/teaching.js"></script>
+    <script src="./src/pages/work.js"></script>
+    <script type="text/javascript">
+      let app = new Vue({
+        el: '#app',
+        data: {
+          page: ''
+        },
+        methods: {
+          handleHashChange: function (event) {
+            let page;
+            const validPages = ['about', 'work', 'teaching', 'projects'];
+            if (window.location.hash) {
+              page = window.location.hash.slice(1);
+            }
+
+            if (!validPages.includes(page)) {
+              page = 'about';
+            }
+
+            this.page = page;
+          }
+        }
+      });
+
+      window.addEventListener('hashchange', app.handleHashChange);
+      app.handleHashChange();
+    </script>
   </body>
 </html>
