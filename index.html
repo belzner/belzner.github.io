@@ -9,7 +9,7 @@
     <div id="app">
       <page-header v-bind:page='page'></page-header>
       <div class="page-main">
-        <component v-bind:is='"page-" + this.page'></component>
+        <component v-if='page' v-bind:is='"page-" + this.page'></component>
       </div>
     </div>
     <script src="./src/shared-components.js"></script>

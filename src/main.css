@@ -79,6 +79,11 @@ a:hover, a.active {
   padding: 20px 40px 0;
 }
 
+.carousel-head .pages span {
+  margin: 2px;
+  cursor: pointer;
+}
+
 .carousel-wrapper {
   width: 100%;
   overflow: hidden;
@@ -106,6 +111,7 @@ a:hover, a.active {
   align-items: center;
   font-weight: bold;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .carousel {
@@ -123,4 +129,12 @@ a:hover, a.active {
 .carousel .panel .title {
   margin-bottom: 1em;
   margin-top: 0.5em;
+}
+
+.panel.teaching .description, .panel.teaching .about {
+  margin-bottom: 1em;
+}
+
+.panel.teaching .title, .panel.teaching .label {
+  font-weight: bold;
 }

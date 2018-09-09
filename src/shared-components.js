@@ -43,11 +43,28 @@ Vue.component('page-header', {
 Vue.component('carousel-section', {
   template: `
     <div class='section'>
-      <h3 class='carousel-head'><span class="fa fa-angle-double-right"></span> {{ title }}</h3>
+      <div class='head carousel-head'>
+        <h3><span class="fa fa-angle-double-right"></span> {{ title }}</h3>
+        <div class='pages'>
+          <span
+            v-for='(panel, idx) in panelData'
+            v-bind:class='"fa fa-circle" + (idx === page ? "" : "-thin")'
+            v-on:click='movePage(idx)'
+          ></span>
+        </div>
+      </div>
       <div class='carousel-wrapper'>
         <div class='arrows'>
-          <div class='arrow fa fa-angle-left' v-on:click='moveLeft' v-bind:style='"visibility: " + (this.page > 0 ? "visible" : "hidden")'></div>
-          <div class='arrow fa fa-angle-right' v-on:click='moveRight' v-bind:style='"visibility: " + (this.page < this.panelData.length - 1 ? "visible" : "hidden")'></div>
+          <div
+            class='arrow fa fa-angle-left'
+            v-on:click='moveLeft'
+            v-bind:style='"visibility: " + (this.page > 0 ? "visible" : "hidden")'
+          ></div>
+          <div
+            class='arrow fa fa-angle-right'
+            v-on:click='moveRight'
+            v-bind:style='"visibility: " + (this.page < this.panelData.length - 1 ? "visible" : "hidden")'
+          ></div>
         </div>
         <div class='carousel' v-bind:style='"transform: translateX(-" + (this.page * 100) + "%)"'>
           <component
@@ -75,6 +92,11 @@ Vue.component('carousel-section', {
     moveRight: function(e) {
       if (this.page < this.panelData.length - 1) {
         this.page += 1;
+      }
+    },
+    movePage: function(idx) {
+      if (idx >= 0 && idx < this.panelData.length) {
+        this.page = idx;
       }
     }
   }
