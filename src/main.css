@@ -135,6 +135,6 @@ a:hover, a.active {
   margin-bottom: 1em;
 }
 
-.panel.teaching .title, .panel.teaching .label {
+.panel .title, .panel .label {
   font-weight: bold;
 }
