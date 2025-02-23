@@ -1,0 +1,26 @@
+---
+const { company, site, roles = [] } = Astro.props;
+---
+
+<div>
+    <h3 class="company"><a href={site} target="_blank">{company}</a></h3>
+    <ul class="roles">{roles.map(role => (
+        <li><strong>{role.title}</strong>, {role.dates}</li>
+    ))}</ul>
+    <div>
+        <slot name="description" />
+    </div>
+</div>
+
+<style>
+.company {
+    margin: 0;
+}
+
+.roles {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.875rem;
+}
+</style>
