@@ -1,0 +1,69 @@
+---
+import Section from '../components/Section.astro';
+import WorkItem from '../components/WorkItem.astro';
+
+const lithicRoles = [
+	{title: "Staff Software Engineer, Privacy.com", dates: "Jan 2024 - Present"},
+	{title: "Senior Software Engineer, Privacy.com", dates: "Mar 2022 - Jan 2024"},
+	{title: "Engineering Lead, Product Engineering", dates: "Apr 2020 - Mar 2022"},
+	{title: "Software Engineer", dates: "Nov 2018 - Apr 2020"},
+];
+
+const timeline = ['', 2025];
+
+for (let year = 2024; year >= 2012; year--) {
+    for (let count = 0; count < 11; count++) {
+        timeline.push('');
+    }
+    timeline.push(year);
+}
+
+// TODO position contents
+---
+
+<Section title="Work and Education">
+    <div class="wrapper">
+        <div class="details">
+            <WorkItem company="Lithic" site="https://www.lithic.com/" roles={lithicRoles} />
+            <WorkItem company="Skillshare" site="https://www.skillshare.com/en/" roles={[{title: "Software Engineer", dates: "Jul 2016 - Nov 2018"}]} />
+            <WorkItem company="Luminoso" site="https://luminoso.com/" roles={[{title: "Frontend Dev Intern", dates: "Jun 2015 - Aug 2015"}]} />
+            <WorkItem company="Tumblr" site="https://www.tumblr.com/" roles={[{title: "Product Engineering Intern", dates: "May 2014 - Aug 2014"}]} />
+        </div>
+        <div class="timeline">
+            {timeline.map(tick => (
+                <div class="tick"><span class="year">{tick}</span></div>
+            ))}
+        </div>
+    </div>
+</Section>
+
+<style>
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.timeline {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 50px;
+}
+
+.tick {
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    height: 5px;
+    width: 2px;
+    font-size: 10px;
+}
+
+.year {
+    position: relative;
+    left: 5px;
+    top: -2px;
+}
+</style>
