@@ -1,6 +1,8 @@
 <header class="header">
-    <div class="greeting">Hello, my name is</div>
-    <div class="name">Megan</div>
+    <a href="/" class="header-link">
+        <div class="greeting">Hello, my name is</div>
+        <div class="name">Megan</div>
+    </a>
 </header>
 
 <style lang="scss">
@@ -9,8 +11,13 @@
     border: 3px solid #e72828ff;
     border-radius: 0.5rem;
     box-shadow: -0.2rem 0.5rem;
-    margin: 1rem;
+    margin: 1rem 1rem 1.5rem;
     text-align: center;
+}
+
+.header-link {
+    color: #000000;
+    text-decoration: none;
 }
 
 .greeting {
