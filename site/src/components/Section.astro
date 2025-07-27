@@ -4,8 +4,10 @@ const { title, side } = Astro.props;
 const boxShadowSize = '0.5rem';
 ---
 
-<section class:list={['section', side]}>
-    <div class="title-wrapper"><h2 class="title">{title}</h2></div>
+<section class:list={['section', side, { 'has-title': !!title }]}>
+    {title ? 
+        <div class="title-wrapper"><h2 class="title">{title}</h2></div>
+        : ''}
     <div class="inner-section">
         <div class="text-section">
             <slot />
@@ -18,9 +20,34 @@ const boxShadowSize = '0.5rem';
     position: relative;
     background-color: #f49cdaff;
     border: 2px solid #000000;
+    box-shadow: -0.2rem var(--boxShadowSize);
     max-width: 800px;
     width: 80%;
-    margin: 4rem 2rem 2rem;
+    margin: 2rem;
+}
+
+.inner-section {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.has-title {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+}
+
+.title {
+    position: absolute;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: -0.2rem var(--boxShadowSize);
+    margin: 0;
+    padding: 0.5rem;
+    top: -3rem;
+    font-size: 3.5rem;
+	font-family: "Fugaz One", Arial, Helvetica, sans-serif;
 }
 
 .left {
@@ -30,6 +57,10 @@ const boxShadowSize = '0.5rem';
     .title {
         box-shadow: calc(-1 * var(--boxShadowSize)) var(--boxShadowSize);
         left: 1.5rem;
+    }
+
+    .inner-section {
+        padding-inline: 1rem;
     }
 
     .text-section {
@@ -48,28 +79,14 @@ const boxShadowSize = '0.5rem';
         right: 1.5rem;
     }
 
+    .inner-section {
+        padding-inline: 1rem;
+    }
+
     .text-section {
         transform: perspective(4rem) rotateY(1deg);
         margin-left: 5rem;
         margin-right: 0;
     }
-}
-
-.inner-section {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    margin: 2rem;
-    padding: 2.5rem 1rem 2rem;
-}
-
-.title {
-    position: absolute;
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    margin: 0;
-    padding: 0.5rem;
-    top: -3rem;
-    font-size: 3.5rem;
-	font-family: "Fugaz One", Arial, Helvetica, sans-serif;
 }
 </style>

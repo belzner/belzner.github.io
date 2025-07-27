@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+
+const { src, alt, id } = Astro.props;
+
+// TODO style dialog, make it more obvious that you can click on thumbnail?
+---
+
+<zoom-image data-id={id}>
+    <Image src={src} alt={alt} height="100" id={id + '-thumbnail'} class="thumbnail-image" />
+    <dialog id={id} class="dialog">
+        <div class="inner-dialog">
+            <button id={id + '-close'} class="close-button">Close</button>
+            <Image src={src} alt={alt} class="dialog-image" />
+        </div>
+    </dialog>
+</zoom-image>
+
+<script>
+class ZoomImage extends HTMLElement {
+    connectedCallback() {
+        const dialog = document.querySelector('#' + this.dataset.id);
+        const thumbnail = document.querySelector('#' + this.dataset.id + '-thumbnail');
+        const closeButton = document.querySelector('#' + this.dataset.id + '-close');
+
+        thumbnail.addEventListener("click", () => {
+            dialog.showModal();
+        });
+
+        closeButton.addEventListener("click", () => {
+            dialog.close();
+        });
+    }
+}
+
+customElements.define('zoom-image', ZoomImage);
+</script>
+
+<style lang="scss">
+.dialog {
+    max-width: 1000px;
+}
+
+.inner-dialog {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0 1rem 1rem;
+    cursor: pointer;
+}
+
+.dialog-image {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail-image {
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .dialog {
+        margin-inline: 50px;
+    }
+}
+</style>
