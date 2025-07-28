@@ -3,11 +3,11 @@ import { Image } from 'astro:assets';
 
 const { src, alt, id } = Astro.props;
 
-// TODO style dialog, make it more obvious that you can click on thumbnail?
+// TODO make it more obvious that you can click on thumbnail? arrows between pictures?
 ---
 
 <zoom-image data-id={id}>
-    <Image src={src} alt={alt} height="100" id={id + '-thumbnail'} class="thumbnail-image" />
+    <Image src={src} alt={alt} height="95" id={id + '-thumbnail'} class="thumbnail-image" />
     <dialog id={id} class="dialog">
         <div class="inner-dialog">
             <button id={id + '-close'} class="close-button">Close</button>
@@ -22,13 +22,20 @@ class ZoomImage extends HTMLElement {
         const dialog = document.querySelector('#' + this.dataset.id);
         const thumbnail = document.querySelector('#' + this.dataset.id + '-thumbnail');
         const closeButton = document.querySelector('#' + this.dataset.id + '-close');
+        const backdrop = document.querySelector('#' + this.dataset.id + '::backdrop');
 
-        thumbnail.addEventListener("click", () => {
+        thumbnail.addEventListener('click', () => {
             dialog.showModal();
         });
 
-        closeButton.addEventListener("click", () => {
+        closeButton.addEventListener('click', () => {
             dialog.close();
+        });
+
+        dialog.addEventListener('click', (event) => {
+            if (event.target === dialog) {
+                dialog.close();
+            }
         });
     }
 }
@@ -38,7 +45,14 @@ customElements.define('zoom-image', ZoomImage);
 
 <style lang="scss">
 .dialog {
+    background: none;
+    border: none;
     max-width: 1000px;
+    padding: 1rem;
+}
+
+.dialog::backdrop {
+    background-color: #000000a0;
 }
 
 .inner-dialog {
@@ -48,16 +62,22 @@ customElements.define('zoom-image', ZoomImage);
 
 .close-button {
     align-self: flex-end;
-    background: none;
-    border: none;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-bottom: none;
     outline: none;
-    padding: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    box-shadow: -0.2rem 0.5rem;
 }
 
 .dialog-image {
     width: 100%;
     height: auto;
+    max-height: 90vh;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: -0.2rem 0.5rem;
 }
 
 .thumbnail-image {

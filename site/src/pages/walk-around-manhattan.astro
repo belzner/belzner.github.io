@@ -19,6 +19,18 @@ import walk1Image11 from '../assets/walk-images/walk-1-11.jpg';
 import walk1Image12 from '../assets/walk-images/walk-1-12.jpg';
 
 import walk2Image from '../assets/walk-images/walk-2.jpeg';
+import walk2Image1 from '../assets/walk-images/walk-2-1.jpg';
+import walk2Image2 from '../assets/walk-images/walk-2-2.jpg';
+import walk2Image3 from '../assets/walk-images/walk-2-3.jpg';
+import walk2Image4 from '../assets/walk-images/walk-2-4.jpg';
+import walk2Image5 from '../assets/walk-images/walk-2-5.jpg';
+import walk2Image6 from '../assets/walk-images/walk-2-6.jpg';
+import walk2Image7 from '../assets/walk-images/walk-2-7.jpg';
+import walk2Image8 from '../assets/walk-images/walk-2-8.jpg';
+import walk2Image9 from '../assets/walk-images/walk-2-9.jpg';
+import walk2Image10 from '../assets/walk-images/walk-2-10.jpg';
+import walk2Image11 from '../assets/walk-images/walk-2-11.jpg';
+
 import walk3Image from '../assets/walk-images/walk-3.jpeg';
 import walk4Image from '../assets/walk-images/walk-4.jpeg';
 import walk5Image from '../assets/walk-images/walk-5.jpeg';
@@ -27,8 +39,6 @@ import walk7Image from '../assets/walk-images/walk-7.jpeg';
 import walk8Image from '../assets/walk-images/walk-8.jpeg';
 
 const mapImageSize = '400';
-
-// TODO add pages for fun stuff
 ---
 
 <Layout>
@@ -36,60 +46,89 @@ const mapImageSize = '400';
 		<p>
             In NYC, there's an annual event called the <a href="https://shorewalkers.org/great-saunter/" target="_blank">Great Saunter</a>, in which people walk around the entire perimeter of Manhattan, about 32 miles, in a single day. I loved the idea when I heard about it, but there's no way I would be able to do it in one day, or at least enjoy doing it. So! I decided to do it in parts - about 4 miles at a time, over the course of several weekends.
         </p>
-        <h2>First Section (Sept 15th, 2024)</h2>
-        <p class="map-image">
-            <Image src={walk1Image} alt="Map of Manhattan with a line going from Battery Park to 14th Street along the west side" width={mapImageSize} />
-        </p>
-        <p>
-            I started at the Staten Island Ferry Terminal, and ended the first day at Pier 57 (approximately 14th Street). This is an area I've spent a lot of time around already, but there was a lot I hadn't seen (or at least, noticed) before!
-        </p>
-        <ZoomImage src={walk1Image1} alt="Test" id="walk-1-1" />
-        <ZoomImage src={walk1Image2} alt="Test" id="walk-1-2" />
-        <ZoomImage src={walk1Image3} alt="Test" id="walk-1-3" />
-        <ZoomImage src={walk1Image4} alt="Test" id="walk-1-4" />
-        <ZoomImage src={walk1Image5} alt="Test" id="walk-1-5" />
-        <ZoomImage src={walk1Image6} alt="Test" id="walk-1-6" />
-        <ZoomImage src={walk1Image7} alt="Test" id="walk-1-7" />
-        <ZoomImage src={walk1Image8} alt="Test" id="walk-1-8" />
-        <ZoomImage src={walk1Image9} alt="Test" id="walk-1-9" />
-        <ZoomImage src={walk1Image10} alt="Test" id="walk-1-10" />
-        <ZoomImage src={walk1Image11} alt="Test" id="walk-1-11" />
-        <ZoomImage src={walk1Image12} alt="Test" id="walk-1-12" />
-        <h2>Second Section (Sept 22nd, 2024)</h2>
-        <p class="map-image">
-            <Image src={walk2Image} alt="Map of Manhattan with a line going from 14th Street to 72nd Street on the west side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
-        <h2>Third Section (Sept 29th, 2024)</h2>
-        <p class="map-image">
-            <Image src={walk3Image} alt="Map of Manhattan with a line going from 72nd Street to 125th Street on the west side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
-        <h2>Fourth Section (Oct 6th, 2024)</h2>
-        <p class="map-image">
-            <Image src={walk4Image} alt="Map of Manhattan with a line going from 125th Street to Dyckman Street on the west side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
-        <h2>Fifth Section (May 3rd, 2025)</h2>
-        <p class="map-image">
-            <Image src={walk5Image} alt="Map of Manhattan with a line going from Dyckman Street on the west side around the top of the island and to 155th Street on the east side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
-        <h2>Sixth Section (May 11th, 2025)</h2>
-        <p class="map-image">
-            <Image src={walk6Image} alt="Map of Manhattan with a line going from 155th Street to 96th Street on the east side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
-        <h2>Seventh Section (May 25th, 2025)</h2>
-        <p class="map-image">
-            <Image src={walk7Image} alt="Map of Manhattan with a line going from 96th Street to 35th Street on the east side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
-        <h2>Last Section (June 8th, 2025)</h2>
-        <p class="map-image">
-            <Image src={walk8Image} alt="Map of Manhattan with a line going from 35th Street to Battery Park on the east side" width={mapImageSize} />
-        </p>
-        <p>TK</p>
+        <div>
+            <h2>First Section (Sept 15th, 2024)</h2>
+            <p class="map-image">
+                <Image src={walk1Image} alt="Map of Manhattan with a line going from Battery Park to 14th Street along the west side" width={mapImageSize} />
+            </p>
+            <p>
+                I started at the Staten Island Ferry Terminal, and ended the first day at Pier 57 (approximately 14th Street). This is an area I've spent a lot of time around already, but there was a lot I hadn't seen (or at least, noticed) before!
+            </p>
+            <ZoomImage src={walk1Image1} alt="A picture of water with a silhouette of the Statue of Liberty visible in the distance" id="walk-1-1" />
+            <ZoomImage src={walk1Image2} alt="The Jersey City skyline from Lower Manhattan" id="walk-1-2" />
+            <ZoomImage src={walk1Image3} alt="A structure with many columns in a pedestrian area surrounded by trees" id="walk-1-3" />
+            <ZoomImage src={walk1Image4} alt="A long bench with the panels painted multiple colors on the side of a pedestrian area" id="walk-1-4" />
+            <ZoomImage src={walk1Image5} alt="A picture from a pier of a docked sailboat and many skyscrapers" id="walk-1-5" />
+            <ZoomImage src={walk1Image6} alt="A boat labeled 'Don't Tell Mom'" id="walk-1-6" />
+            <ZoomImage src={walk1Image7} alt="Two purple flowers" id="walk-1-7" />
+            <ZoomImage src={walk1Image8} alt="A grass field with some people sitting or standing and many ducks" id="walk-1-8" />
+            <ZoomImage src={walk1Image9} alt="Two children's play structures shaped like large fish" id="walk-1-9" />
+            <ZoomImage src={walk1Image10} alt="A picture of a pier from a distance with the words 'I want to thank you' painted on it" id="walk-1-10" />
+            <ZoomImage src={walk1Image11} alt="A metal structure over a sidewalk" id="walk-1-11" />
+            <ZoomImage src={walk1Image12} alt="A metal statue of a stylized apple" id="walk-1-12" />
+        </div>
+        <div>
+            <h2>Second Section (Sept 22nd, 2024)</h2>
+            <p class="map-image">
+                <Image src={walk2Image} alt="Map of Manhattan with a line going from 14th Street to 72nd Street on the west side" width={mapImageSize} />
+            </p>
+            <p>
+                On the second day, I went from Pier 57 up to 72nd Street. The first day was pretty built-up and touristy, and this stretch is for most of it too. Once I got up around 60th Street, it very quickly started getting greener and quieter.
+            </p>
+            <ZoomImage src={walk2Image1} alt="A boat with the label 'Frying Pan'" id="walk-2-1" />
+            <ZoomImage src={walk2Image2} alt="A restaurant on a pier with a large frying pan in front" id="walk-2-2" />
+            <ZoomImage src={walk2Image3} alt="Colorful flowers behind a wire fence" id="walk-2-3" />
+            <ZoomImage src={walk2Image4} alt="A painting of a woman on a wall across a busy street" id="walk-2-4" />
+            <ZoomImage src={walk2Image5} alt="A boat with a sign saying 'eat tacos on a boat'" id="walk-2-5" />
+            <ZoomImage src={walk2Image6} alt="A large statue of a bottle on its side" id="walk-2-6" />
+            <ZoomImage src={walk2Image7} alt="A large tree in front of an elevated road and buildings" id="walk-2-7" />
+            <ZoomImage src={walk2Image8} alt="A shiny new pier alongside broken wooden posts" id="walk-2-8" />
+            <ZoomImage src={walk2Image9} alt="A wood path with plants on either side" id="walk-2-9" />
+            <ZoomImage src={walk2Image10} alt="A broken down wood and metal structure in the water" id="walk-2-10" />
+            <ZoomImage src={walk2Image11} alt="A path through a grassy area between a raised road and buildings" id="walk-2-11" />
+        </div>
+        <div>
+            <h2>Third Section (Sept 29th, 2024)</h2>
+            <p class="map-image">
+                <Image src={walk3Image} alt="Map of Manhattan with a line going from 72nd Street to 125th Street on the west side" width={mapImageSize} />
+            </p>
+            <p>TK</p>
+        </div>
+        <div>
+            <h2>Fourth Section (Oct 6th, 2024)</h2>
+            <p class="map-image">
+                <Image src={walk4Image} alt="Map of Manhattan with a line going from 125th Street to Dyckman Street on the west side" width={mapImageSize} />
+            </p>
+            <p>TK</p>
+        </div>
+        <div>
+            <h2>Fifth Section (May 3rd, 2025)</h2>
+            <p class="map-image">
+                <Image src={walk5Image} alt="Map of Manhattan with a line going from Dyckman Street on the west side around the top of the island and to 155th Street on the east side" width={mapImageSize} />
+            </p>
+            <p>TK</p>
+        </div>
+        <div>
+            <h2>Sixth Section (May 11th, 2025)</h2>
+            <p class="map-image">
+                <Image src={walk6Image} alt="Map of Manhattan with a line going from 155th Street to 96th Street on the east side" width={mapImageSize} />
+            </p>
+            <p>TK</p>
+        </div>
+        <div>
+            <h2>Seventh Section (May 25th, 2025)</h2>
+            <p class="map-image">
+                <Image src={walk7Image} alt="Map of Manhattan with a line going from 96th Street to 35th Street on the east side" width={mapImageSize} />
+            </p>
+            <p>TK</p>
+        </div>
+        <div>
+            <h2>Last Section (June 8th, 2025)</h2>
+            <p class="map-image">
+                <Image src={walk8Image} alt="Map of Manhattan with a line going from 35th Street to Battery Park on the east side" width={mapImageSize} />
+            </p>
+            <p>TK</p>
+        </div>
 	</Section>
 </Layout>
 
