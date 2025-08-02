@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
-const { src, alt, id } = Astro.props;
+const { src, alt, id, videoSrc } = Astro.props;
 
 // TODO make it more obvious that you can click on thumbnail? arrows between pictures?
 ---
@@ -11,7 +11,12 @@ const { src, alt, id } = Astro.props;
     <dialog id={id} class="dialog">
         <div class="inner-dialog">
             <button id={id + '-close'} class="close-button">Close</button>
-            <Image src={src} alt={alt} class="dialog-image" />
+            {!!videoSrc ?
+                <video controls class="dialog-image">
+                    <source src={videoSrc} type="video/mp4" />
+                </video> :
+                <Image src={src} alt={alt} class="dialog-image" />
+            }
         </div>
     </dialog>
 </zoom-image>
