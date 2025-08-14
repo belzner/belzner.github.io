@@ -1,36 +1,41 @@
 ---
 import { Image } from 'astro:assets';
 
-const { src, alt, id, videoSrc } = Astro.props;
+const { src, alt, id, videoSrc, first, last } = Astro.props;
 
-// TODO make it more obvious that you can click on thumbnail? arrows between pictures?
+// TODO make it more obvious that you can click on thumbnail?
 ---
-
-<zoom-image data-id={id}>
-    <Image src={src} alt={alt} title={alt} height="95" id={id + '-thumbnail'} class="thumbnail-image" />
-    <dialog id={id} class="dialog">
-        <div class="inner-dialog">
-            <button id={id + '-close'} class="close-button">Close</button>
-            {!!videoSrc ?
-                <video controls class="dialog-image">
-                    <source src={videoSrc} type="video/mp4" />
-                </video> :
-                <Image src={src} alt={alt} title={alt} class="dialog-image" />
-            }
-        </div>
-    </dialog>
-</zoom-image>
 
 <script>
 class ZoomImage extends HTMLElement {
     connectedCallback() {
         const dialog = document.querySelector('#' + this.dataset.id);
         const thumbnail = document.querySelector('#' + this.dataset.id + '-thumbnail');
+        const prevButton = document.querySelector('#' + this.dataset.id + '-prev');
+        const nextButton = document.querySelector('#' + this.dataset.id + '-next');
         const closeButton = document.querySelector('#' + this.dataset.id + '-close');
         const backdrop = document.querySelector('#' + this.dataset.id + '::backdrop');
 
         thumbnail.addEventListener('click', () => {
             dialog.showModal();
+        });
+
+        prevButton?.addEventListener('click', () => {
+            const prevDialog = dialog?.parentElement?.previousElementSibling?.querySelector('.dialog');
+            console.log(dialog?.parentElement?.previousElementSibling);
+            if (prevDialog) {
+                dialog.close();
+                prevDialog.showModal();
+            }
+        });
+
+        nextButton?.addEventListener('click', () => {
+            const nextDialog = dialog?.parentElement?.nextElementSibling?.querySelector('.dialog');
+            console.log(dialog?.parentElement?.nextElementSibling);
+            if (nextDialog) {
+                dialog.close();
+                nextDialog.showModal();
+            }
         });
 
         closeButton.addEventListener('click', () => {
@@ -48,12 +53,29 @@ class ZoomImage extends HTMLElement {
 customElements.define('zoom-image', ZoomImage);
 </script>
 
+<zoom-image data-id={id}>
+    <Image src={src} alt={alt} title={alt} height="95" id={id + '-thumbnail'} class="thumbnail-image" />
+    <dialog id={id} class="dialog">
+        <div class="inner-dialog">
+            <button id={id + '-close'} class="close-button">Close</button>
+            {!first ? <button id={id + '-prev'} class="prev-button">&lt;</button> : ''}
+            {!last ? <button id={id + '-next'} class="next-button">&gt;</button> : ''}
+            {!!videoSrc ?
+                <video controls class="dialog-image">
+                    <source src={videoSrc} type="video/mp4" />
+                </video> :
+                <Image src={src} alt={alt} title={alt} class="dialog-image" />
+            }
+        </div>
+    </dialog>
+</zoom-image>
+
 <style lang="scss">
 .dialog {
     background: none;
     border: none;
     max-width: 1000px;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 .dialog::backdrop {
@@ -63,6 +85,27 @@ customElements.define('zoom-image', ZoomImage);
 .inner-dialog {
     display: flex;
     flex-direction: column;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-bottom: none;
+    outline: none;
+    box-shadow: -0.2rem 0.5rem;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
 }
 
 .close-button {
@@ -84,6 +127,7 @@ customElements.define('zoom-image', ZoomImage);
     border: 2px solid #000000;
     box-sizing: border-box;
     box-shadow: -0.2rem 0.5rem;
+    z-index: 2;
 }
 
 .thumbnail-image {

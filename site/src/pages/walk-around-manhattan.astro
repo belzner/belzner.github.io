@@ -144,7 +144,7 @@ const mapImageSize = '400';
             <p>
                 I started at the Staten Island Ferry Terminal, and ended the first day at Pier 57 (approximately 14th Street). This is an area I've spent a lot of time around already, but there was a lot I hadn't seen (or at least, noticed) before!
             </p>
-            <ZoomImage src={walk1Image1} alt="A picture of water with a silhouette of the Statue of Liberty visible in the distance" id="walk-1-1" />
+            <ZoomImage src={walk1Image1} alt="A picture of water with a silhouette of the Statue of Liberty visible in the distance" id="walk-1-1" first={true} />
             <ZoomImage src={walk1Image2} alt="The Jersey City skyline from Lower Manhattan" id="walk-1-2" />
             <ZoomImage src={walk1Image3} alt="A structure with many columns in a pedestrian area surrounded by trees" id="walk-1-3" />
             <ZoomImage src={walk1Image4} alt="A long bench with the panels painted multiple colors on the side of a pedestrian area" id="walk-1-4" />
@@ -155,7 +155,7 @@ const mapImageSize = '400';
             <ZoomImage src={walk1Image9} alt="Two children's play structures shaped like large fish" id="walk-1-9" />
             <ZoomImage src={walk1Image10} alt="A picture of a pier from a distance with the words 'I want to thank you' painted on it" id="walk-1-10" />
             <ZoomImage src={walk1Image11} alt="A metal structure over a sidewalk" id="walk-1-11" />
-            <ZoomImage src={walk1Image12} alt="A metal statue of a stylized apple" id="walk-1-12" />
+            <ZoomImage src={walk1Image12} alt="A metal statue of a stylized apple" id="walk-1-12" last={true} />
         </div>
         <div>
             <h2>Second Section (Sept 22nd, 2024)</h2>
@@ -165,7 +165,7 @@ const mapImageSize = '400';
             <p>
                 On the second day, I went from Pier 57 up to 72nd Street. The first day was pretty built-up and touristy, and this stretch is for most of it too. Once I got up around 60th Street, it very quickly started getting greener and quieter.
             </p>
-            <ZoomImage src={walk2Image1} alt="A boat with the label 'Frying Pan'" id="walk-2-1" />
+            <ZoomImage src={walk2Image1} alt="A boat with the label 'Frying Pan'" id="walk-2-1" first={true} />
             <ZoomImage src={walk2Image2} alt="A restaurant on a pier with a large frying pan in front" id="walk-2-2" />
             <ZoomImage src={walk2Image3} alt="Colorful flowers behind a wire fence" id="walk-2-3" />
             <ZoomImage src={walk2Image4} alt="A painting of a woman on a wall across a busy street" id="walk-2-4" />
@@ -175,7 +175,7 @@ const mapImageSize = '400';
             <ZoomImage src={walk2Image8} alt="A shiny new pier alongside broken wooden posts" id="walk-2-8" />
             <ZoomImage src={walk2Image9} alt="A wood path with plants on either side" id="walk-2-9" />
             <ZoomImage src={walk2Image10} alt="A broken down wood and metal structure in the water" id="walk-2-10" />
-            <ZoomImage src={walk2Image11} alt="A path through a grassy area between a raised road and buildings" id="walk-2-11" />
+            <ZoomImage src={walk2Image11} alt="A path through a grassy area between a raised road and buildings" id="walk-2-11" last={true} />
         </div>
         <div>
             <h2>Third Section (Sept 29th, 2024)</h2>
@@ -183,7 +183,7 @@ const mapImageSize = '400';
                 <Image src={walk3Image} alt="Map of Manhattan with a line going from 72nd Street to 125th Street on the west side" width={mapImageSize} />
             </p>
             <p>On the third day, I went from 72nd street up to 125th street. A stretch of the waterfront path here was blocked off for construction, so much of this was along an elevated portion of Riverside Park.</p>
-            <ZoomImage src={walk3Image1} alt="A tree on a rainy day" id="walk-3-1" />
+            <ZoomImage src={walk3Image1} alt="A tree on a rainy day" id="walk-3-1" first={true} />
             <ZoomImage src={walk3Image2} alt="A picture from the top of an outdoor staircase on a rainy day" id="walk-3-2" />
             <ZoomImage src={walk3Image3} alt="A tree with a trunk that bends at a near right angle to lean over the path" id="walk-3-3" />
             <ZoomImage src={walk3Image4} alt="Large trees with fall colors and many orange leaves on the ground" id="walk-3-4" />
@@ -193,9 +193,9 @@ const mapImageSize = '400';
             <ZoomImage src={walk3Image8} alt="Large flower bushes behind a bench on a rainy day" id="walk-3-8" />
             <ZoomImage src={walk3Image9} alt="A walking path framed by autumn trees on a rainy day" id="walk-3-9" />
             <ZoomImage src={walk3Image10} alt="Trees and many fallen leaves on a rainy day" id="walk-3-10" />
-            <ZoomImage src={walk3Image11} alt="A tree stump on the side of a path on a rainy day" id="walk-3-11" />
+            <ZoomImage src={walk3Image11} alt="A tree stump on the side of a path on a rainy day" id="walk-3-11" last={true} />
             <p>It... rained a lot! For the record, it wasn't raining much when I started - by the time the rain got bad, I was already pretty far 😅</p>
-            <ZoomImage src={walk3Mp4Thumb} videoSrc={walk3Mp4} alt="Video of rain on a path" id="walk-3-rain" />
+            <ZoomImage src={walk3Mp4Thumb} videoSrc={walk3Mp4} alt="Video of rain on a path" id="walk-3-rain" first={true} last={true} />
         </div>
         <div>
             <h2>Fourth Section (Oct 6th, 2024)</h2>
@@ -203,7 +203,7 @@ const mapImageSize = '400';
                 <Image src={walk4Image} alt="Map of Manhattan with a line going from 125th Street to Dyckman Street on the west side" width={mapImageSize} />
             </p>
             <p>The fourth day, and the last before I paused for winter, I went from 125th Street to Dyckman Street, at the top of Fort Tryon Park. Stretches of this walk were also closed off for construction, but some parts were right along the water (including an adorable little lighthouse!)</p>
-            <ZoomImage src={walk4Image1} alt="A bike path under an elevated road" id="walk-4-1" />
+            <ZoomImage src={walk4Image1} alt="A bike path under an elevated road" id="walk-4-1" first={true} />
             <ZoomImage src={walk4Image2} alt="An Amtrak train going by behind a fence" id="walk-4-2" />
             <ZoomImage src={walk4Image3} alt="A statue in a park that looks like a boulder with a pink structure sticking from the top" id="walk-4-3" />
             <ZoomImage src={walk4Image4} alt="A swingset in a fenced playground surrounded by green trees" id="walk-4-4" />
@@ -214,7 +214,7 @@ const mapImageSize = '400';
             <ZoomImage src={walk4Image9} alt="A small tree on the river shore with a sailboat visible in the distance" id="walk-4-9" />
             <ZoomImage src={walk4Image10} alt="A pedestrian bridge with a sign saying 'Our Community is Our Strength'" id="walk-4-10" />
             <ZoomImage src={walk4Image11} alt="A bunch of flowers next to a street" id="walk-4-11" />
-            <ZoomImage src={walk4Image12} alt="A statue in a park in a squared zigzag shape" id="walk-4-12" />
+            <ZoomImage src={walk4Image12} alt="A statue in a park in a squared zigzag shape" id="walk-4-12" last={true} />
         </div>
         <div>
             <h2>Fifth Section (May 3rd, 2025)</h2>
@@ -222,7 +222,7 @@ const mapImageSize = '400';
                 <Image src={walk5Image} alt="Map of Manhattan with a line going from Dyckman Street on the west side around the top of the island and to 155th Street on the east side" width={mapImageSize} />
             </p>
             <p>Once it started getting warmer again, I started back up at Dyckman Street on the west side, looping around the top of Manhattan and ending up at 155th Street on the east side. Did you know that after you enter the east side waterfront walkway at Dyckman Street, there's no way to cross back over Harlem River Drive until you reach 155th Street? I didn't!</p>
-            <ZoomImage src={walk5Image1} alt="A small run-down building covered in plants" id="walk-5-1" />
+            <ZoomImage src={walk5Image1} alt="A small run-down building covered in plants" id="walk-5-1" first={true} />
             <ZoomImage src={walk5Image2} alt="A tree with part of the trunk hollowed out" id="walk-5-2" />
             <ZoomImage src={walk5Image3} alt="The underside of a highway with cars parked under it" id="walk-5-3" />
             <ZoomImage src={walk5Image4} alt="A staircase up to the elevated subway with a 'No Entry' sign" id="walk-5-4" />
@@ -232,15 +232,15 @@ const mapImageSize = '400';
             <ZoomImage src={walk5Image8} alt="The underside of a bridge with a similar bridge visible further along the path" id="walk-5-8" />
             <ZoomImage src={walk5Image9} alt="A stone structure overgrown with plants with assorted graffiti" id="walk-5-9" />
             <ZoomImage src={walk5Image10} alt="A tower on a hill at the start of a bridge" id="walk-5-10" />
-            <ZoomImage src={walk5Image11} alt="Buildings visible through trees and bushes on the other side of a grassy area" id="walk-5-11" />
+            <ZoomImage src={walk5Image11} alt="Buildings visible through trees and bushes on the other side of a grassy area" id="walk-5-11" last={true} />
             <p>Looping around the top of the island was pretty neat - from under the Henry Hudson Bridge, I could see a small bit of land poking into the water in the distance, and when I looped around to that bit of land, I could see the spot I had just been a little while ago.</p>
-            <ZoomImage src={walk5Bridge1} alt="A path beneath one side of a bridge that goes over the river" id="walk-5-bridge-1" />
+            <ZoomImage src={walk5Bridge1} alt="A path beneath one side of a bridge that goes over the river" id="walk-5-bridge-1" first={true} />
             <ZoomImage src={walk5Bridge2} alt="A small area of land visible across the water through trees" id="walk-5-bridge-2" />
-            <ZoomImage src={walk5Bridge3} alt="A bridge jutting out from a hilly, forested area across the water" id="walk-5-bridge-3" />
+            <ZoomImage src={walk5Bridge3} alt="A bridge jutting out from a hilly, forested area across the water" id="walk-5-bridge-3" last={true} />
             <p>I also found a cute area called, of all things, "Swindler Cove" - right before getting stuck on the river side of Harlem River Drive for the next almost 50 blocks :)</p>
-            <ZoomImage src={walk5Cove1} alt="A small garden with small arches and various flowers" id="walk-5-cove-1" />
+            <ZoomImage src={walk5Cove1} alt="A small garden with small arches and various flowers" id="walk-5-cove-1" first={true} />
             <ZoomImage src={walk5Cove2} alt="Clusters of white flowers on a bush" id="walk-5-cove-2" />
-            <ZoomImage src={walk5Mp4Thumb} videoSrc={walk5Mp4} alt="A small pond with water flowing down rock tiers" id="walk-5-mp4" />
+            <ZoomImage src={walk5Mp4Thumb} videoSrc={walk5Mp4} alt="A small pond with water flowing down rock tiers" id="walk-5-mp4" last={true} />
         </div>
         <div>
             <h2>Sixth Section (May 11th, 2025)</h2>
@@ -248,7 +248,7 @@ const mapImageSize = '400';
                 <Image src={walk6Image} alt="Map of Manhattan with a line going from 155th Street to 96th Street on the east side" width={mapImageSize} />
             </p>
             <p>On the sixth day, I went from 155th Street to 96th Street. A lot of this was away from the water, at times quite a bit inland! Some sections were under construction, and some just didn't offer riverfront access at all. There was some interesting art along this stretch though!</p>
-            <ZoomImage src={walk6Image1} alt="A colorful mural on the side of a building" id="walk-6-1" />
+            <ZoomImage src={walk6Image1} alt="A colorful mural on the side of a building" id="walk-6-1" first={true} />
             <ZoomImage src={walk6Image2} alt="A strange wooden figure setting on a bench in a grassy field" id="walk-6-2" />
             <ZoomImage src={walk6Image3} alt="A turtle structure with faded paint on a playground, visible through a chain-link fence" id="walk-6-3" />
             <ZoomImage src={walk6Image4} alt="A large box with beaded sides next to a brick wall" id="walk-6-4" />
@@ -259,7 +259,7 @@ const mapImageSize = '400';
             <ZoomImage src={walk6Image9} alt="A large metal sculpture in a park" id="walk-6-9" />
             <ZoomImage src={walk6Image10} alt="A bridge going to a grassy area with tall buildings visible in the further distance" id="walk-6-10" />
             <ZoomImage src={walk6Image11} alt="Leaves and flowers next to a walking path" id="walk-6-11" />
-            <ZoomImage src={walk6Image12} alt="A colorful flower garden behind a fence alongside a brick building" id="walk-6-12" />
+            <ZoomImage src={walk6Image12} alt="A colorful flower garden behind a fence alongside a brick building" id="walk-6-12" last={true} />
         </div>
         <div>
             <h2>Seventh Section (May 25th, 2025)</h2>
@@ -267,7 +267,7 @@ const mapImageSize = '400';
                 <Image src={walk7Image} alt="Map of Manhattan with a line going from 96th Street to 35th Street on the east side" width={mapImageSize} />
             </p>
             <p>On the penultimate walk, I went from 96th Street to 35th Street. There were some inland stretches, especially around the UN.</p>
-            <ZoomImage src={walk7Image1} alt="Trees and bushes on either side of a road with a red 'Wrong Way' sign visible behind a tree" id="walk-7-1" />
+            <ZoomImage src={walk7Image1} alt="Trees and bushes on either side of a road with a red 'Wrong Way' sign visible behind a tree" id="walk-7-1" first={true} />
             <ZoomImage src={walk7Image2} alt="A broken section of path along the river, behind a chain-link fence" id="walk-7-2" />
             <ZoomImage src={walk7Image3} alt="A fence covered in ivy with a bench beneath it" id="walk-7-3" />
             <ZoomImage src={walk7Image4} alt="A small lighthouse on the end of an island in the middle of the river" id="walk-7-4" />
@@ -278,7 +278,7 @@ const mapImageSize = '400';
             <ZoomImage src={walk7Image9} alt="A bridge across the river with a lit street lamp visible in the foreground" id="walk-7-9" />
             <ZoomImage src={walk7Image10} alt="A pattern in the tiles of a walking path" id="walk-7-10" />
             <ZoomImage src={walk7Image11} alt="Various purple, pink, and white flowers" id="walk-7-11" />
-            <ZoomImage src={walk7Image12} alt="A large statue of a man on a horse fighting winged creatures" id="walk-7-12" />
+            <ZoomImage src={walk7Image12} alt="A large statue of a man on a horse fighting winged creatures" id="walk-7-12" last={true} />
         </div>
         <div>
             <h2>Last Section (June 8th, 2025)</h2>
@@ -286,7 +286,7 @@ const mapImageSize = '400';
                 <Image src={walk8Image} alt="Map of Manhattan with a line going from 35th Street to Battery Park on the east side" width={mapImageSize} />
             </p>
             <p>The final stretch! I went from 35th Street to the Staten Island Ferry Terminal - where I started back in September. I haven't spent as much time on this side as on the west side, but this was definitely back in relatively familiar territory. Still saw some things I hadn't noticed before!</p>
-            <ZoomImage src={walk8Image1} alt="A large statue of a sitting dalmatian balancing a taxi on its nose" id="walk-8-1" />
+            <ZoomImage src={walk8Image1} alt="A large statue of a sitting dalmatian balancing a taxi on its nose" id="walk-8-1" first={true} />
             <ZoomImage src={walk8Image2} alt="Purple flowers with a bee buzzing around them" id="walk-8-2" />
             <ZoomImage src={walk8Image3} alt="The river visible through trees and flowers in side-by-side planters" id="walk-8-3" />
             <ZoomImage src={walk8Image4} alt="A bunch of purple flowers in front of the river" id="walk-8-4" />
@@ -300,7 +300,7 @@ const mapImageSize = '400';
             <ZoomImage src={walk8Image12} alt="A boat painted red with the name 'Ambrose', with many tall buildings in the background" id="walk-8-12" />
             <ZoomImage src={walk8Image13} alt="A building jutting into the river with mixed traditional and modern architectural styles" id="walk-8-13" />
             <ZoomImage src={walk8Image14} alt="A small brick church surrounded on all sides by glass skyscrapers" id="walk-8-14" />
-            <ZoomImage src={walk8Image15} alt="A statue of Hello Kitty in front of a modern skyscraper" id="walk-8-15" />
+            <ZoomImage src={walk8Image15} alt="A statue of Hello Kitty in front of a modern skyscraper" id="walk-8-15" last={true} />
         </div>
         <div>
             <h2>Would I Recommend This?</h2>
