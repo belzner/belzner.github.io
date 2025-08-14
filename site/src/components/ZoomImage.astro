@@ -7,7 +7,7 @@ const { src, alt, id, videoSrc } = Astro.props;
 ---
 
 <zoom-image data-id={id}>
-    <Image src={src} alt={alt} height="95" id={id + '-thumbnail'} class="thumbnail-image" />
+    <Image src={src} alt={alt} title={alt} height="95" id={id + '-thumbnail'} class="thumbnail-image" />
     <dialog id={id} class="dialog">
         <div class="inner-dialog">
             <button id={id + '-close'} class="close-button">Close</button>
@@ -15,7 +15,7 @@ const { src, alt, id, videoSrc } = Astro.props;
                 <video controls class="dialog-image">
                     <source src={videoSrc} type="video/mp4" />
                 </video> :
-                <Image src={src} alt={alt} class="dialog-image" />
+                <Image src={src} alt={alt} title={alt} class="dialog-image" />
             }
         </div>
     </dialog>
