@@ -131,7 +131,8 @@ const mapImageSize = '400';
 
 <Layout>
 	<Section>
-		<p>
+        <h1 class="title">Walking Around Manhattan</h1>
+        <p>
             In NYC, there's an annual event called the <a href="https://shorewalkers.org/great-saunter/" target="_blank">Great Saunter</a>, in which people walk around the entire perimeter of Manhattan, about 32 miles, in a single day. I loved the idea when I heard about it, but there's no way I would be able to do it in one day, or at least enjoy doing it. So! I decided to do it in parts - about 4 miles at a time, over the course of several weekends.
         </p>
         <p>Click the image thumbnails to expand them!</p>
@@ -284,27 +285,36 @@ const mapImageSize = '400';
             <p class="map-image">
                 <Image src={walk8Image} alt="Map of Manhattan with a line going from 35th Street to Battery Park on the east side" width={mapImageSize} />
             </p>
-            <p>TK</p>
-            <ZoomImage src={walk8Image1} alt="" id="walk-8-1" />
-            <ZoomImage src={walk8Image2} alt="" id="walk-8-2" />
-            <ZoomImage src={walk8Image3} alt="" id="walk-8-3" />
-            <ZoomImage src={walk8Image4} alt="" id="walk-8-4" />
-            <ZoomImage src={walk8Image5} alt="" id="walk-8-5" />
-            <ZoomImage src={walk8Image6} alt="" id="walk-8-6" />
-            <ZoomImage src={walk8Image7} alt="" id="walk-8-7" />
-            <ZoomImage src={walk8Image8} alt="" id="walk-8-8" />
-            <ZoomImage src={walk8Image9} alt="" id="walk-8-9" />
-            <ZoomImage src={walk8Image10} alt="" id="walk-8-10" />
-            <ZoomImage src={walk8Image11} alt="" id="walk-8-11" />
-            <ZoomImage src={walk8Image12} alt="" id="walk-8-12" />
-            <ZoomImage src={walk8Image13} alt="" id="walk-8-13" />
-            <ZoomImage src={walk8Image14} alt="" id="walk-8-14" />
-            <ZoomImage src={walk8Image15} alt="" id="walk-8-15" />
+            <p>The final stretch! I went from 35th Street to the Staten Island Ferry Terminal - where I started back in September. I haven't spent as much time on this side as on the west side, but this was definitely back in relatively familiar territory. Still saw some things I hadn't noticed before!</p>
+            <ZoomImage src={walk8Image1} alt="A large statue of a sitting dalmatian balancing a taxi on its nose" id="walk-8-1" />
+            <ZoomImage src={walk8Image2} alt="Purple flowers with a bee buzzing around them" id="walk-8-2" />
+            <ZoomImage src={walk8Image3} alt="The river visible through trees and flowers in side-by-side planters" id="walk-8-3" />
+            <ZoomImage src={walk8Image4} alt="A bunch of purple flowers in front of the river" id="walk-8-4" />
+            <ZoomImage src={walk8Image5} alt="The Williamsburg Bridge with the Domino Sugar sign visible in the distance" id="walk-8-5" />
+            <ZoomImage src={walk8Image6} alt="Clusters of pink and green blossoms on a bush" id="walk-8-6" />
+            <ZoomImage src={walk8Image7} alt="A variety of flowers in the median of a road with an elevated highway visible in the background" id="walk-8-7" />
+            <ZoomImage src={walk8Image8} alt="The Manhattan Bridge visible behind a section of elevated highway painted purple" id="walk-8-8" />
+            <ZoomImage src={walk8Image9} alt="The Brooklyn Bridge in the distance from a walkway beneath a highway painted purple" id="walk-8-9" />
+            <ZoomImage src={walk8Image10} alt="The Manhattan and Brooklyn Bridges visible on either side of the image, both going over the river" id="walk-8-10" />
+            <ZoomImage src={walk8Image11} alt="A series of murals in black, white, gray, and yellow, with the words 'You are not alone' on each" id="walk-8-11" />
+            <ZoomImage src={walk8Image12} alt="A boat painted red with the name 'Ambrose', with many tall buildings in the background" id="walk-8-12" />
+            <ZoomImage src={walk8Image13} alt="A building jutting into the river with mixed traditional and modern architectural styles" id="walk-8-13" />
+            <ZoomImage src={walk8Image14} alt="A small brick church surrounded on all sides by glass skyscrapers" id="walk-8-14" />
+            <ZoomImage src={walk8Image15} alt="A statue of Hello Kitty in front of a modern skyscraper" id="walk-8-15" />
+        </div>
+        <div>
+            <h2>Would I Recommend This?</h2>
+            <p>Absolutely! It was a great way to have a reason to explore areas of the city I haven't spent much time in before, and fascinating to see how the environment changed over the course of the walk - what areas are designed for tourists or for families, and what areas have little to no waterfront access at all. Even after living in the city for nearly a decade, there's a lot left to explore.</p>
         </div>
 	</Section>
 </Layout>
 
 <style lang="scss">
+.title {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 .map-image {
     text-align: center;
 }
