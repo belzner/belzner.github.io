@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import ZoomImage from '../components/ZoomImage.astro';
+
+import watercolorVeggies from '../assets/art-images/1-watercolor-veggies.jpg';
+import watercolorOthers from '../assets/art-images/watercolors.jpg';
+import flowersBee from '../assets/art-images/flowers-bee.jpg';
+import lilypads from '../assets/art-images/lilypads.jpg';
+import pinkFlower from '../assets/art-images/pink-flower.jpg';
+---
+
+<Layout>
+	<Section>
+        <h1 class="title">Art I've Made</h1>
+        <p>
+            I've always liked doing art, but hadn't made much time for it for a long time. After taking a drawing class on a whim in Fall 2024, I've been getting back into art of all kinds. In Spring 2025, I did a two-month cohort program at the <a href="https://www.nycdrawingroom.com" target="_blank">Drawing Room</a> designed to explore a variety of media, and I've continued taking other classes there as well as working on art on my own.
+        </p>
+        <p>Click the image thumbnails to expand them!</p>
+        <div>
+            <h2>Watercolors</h2>
+            <p>
+                The first class I took as part of the cohort program was a watercolor class using a variety of vegetables as reference. Watercolor is tricky! I'm super happy with how the leek turned out, though.
+            </p>
+            <ZoomImage src={watercolorVeggies} alt="A larger watercolor painting of several vegetables and two smaller paintings of a leek and a carrot" id="watercolor-veggies" first={true} last={true} />
+            <p>
+                I did these paintings on my own rather than in a class - the landscape is referenced from a photo I found online, and the others are referenced from photos I took (included below! I think a couple were from the botanic gardens, and one was while I was out on a walk).
+            </p>
+            <ZoomImage src={watercolorOthers} alt="Four small watercolor paintings. One is of a mountainous landscape, one is of a flow, one is of flowers and a bee, and one is of lily pads" id="watercolor-others" first={true} />
+            <ZoomImage src={pinkFlower} alt="A photo of a pink and red flower" id="pink-flower" />
+            <ZoomImage src={flowersBee} alt="A photo of purplish flowers with a bee" id="flowers-bee" />
+            <ZoomImage src={lilypads} alt="A photo of lilypads on a pond" id="lilypads" last={true} />
+        </div>
+        <div>
+            <h2>Ceramics</h2>
+        </div>
+        <div>
+            <h2>Block Printing</h2>
+        </div>
+        <div>
+            <h2>Museum Sketches</h2>
+        </div>
+        <div>
+            <h2>Figure Drawing</h2>
+        </div>
+        <div>
+            <h2>Felting</h2>
+        </div>
+        <div>
+            <h2>Collage</h2>
+        </div>
+    </Section>
+</Layout>
+
+<style lang="scss">
+.title {
+    font-size: 2rem;
+    margin-top: 0;
+}
+</style>
