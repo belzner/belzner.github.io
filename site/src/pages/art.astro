@@ -9,6 +9,16 @@ import watercolorOthers from '../assets/art-images/watercolors.jpg';
 import flowersBee from '../assets/art-images/flowers-bee.jpg';
 import lilypads from '../assets/art-images/lilypads.jpg';
 import pinkFlower from '../assets/art-images/pink-flower.jpg';
+
+import clayPot1 from '../assets/art-images/4-clay-pot-1.jpg';
+import clayPot2 from '../assets/art-images/4-clay-pot-2.jpg';
+import clayMagnets1 from '../assets/art-images/8-clay-magnets-1.jpg';
+import clayMagnets2 from '../assets/art-images/8-clay-magnets-2.jpg';
+import clayFarm1 from '../assets/art-images/3-farm-clay-1.jpg';
+import clayFarm2 from '../assets/art-images/3-farm-clay-2.jpg';
+import clayFarm3 from '../assets/art-images/3-farm-clay-3.jpg';
+import clayFarm4 from '../assets/art-images/3-farm-clay-4.jpg';
+import clayFarm5 from '../assets/art-images/3-farm-clay-5.jpg';
 ---
 
 <Layout>
@@ -34,6 +44,21 @@ import pinkFlower from '../assets/art-images/pink-flower.jpg';
         </div>
         <div>
             <h2>Ceramics</h2>
+            <p>
+                I've done a few ceramics classes now, and most of what I learned is that the bigger the piece, the more stressful it is! Little things are fun to make, a large object feels like it will collapse any moment.
+            </p>
+            <ZoomImage src={clayPot1} alt="An unfired purple plant pot with rainbow arms coming from either side" id="clay-pot-1" first={true} />
+            <ZoomImage src={clayPot2} alt="A fired purple plant pot with rainbow arms coming from either side, with a fake plant in it" id="clay-pot-2" />
+            <ZoomImage src={clayMagnets1} alt="Four unfired clay pieces shaped like a peeled banana, an unpeeled banana, a strawberry, and a slice of mushroom pizza" id="clay-magnets-1" />
+            <ZoomImage src={clayMagnets2} alt="Four clay magnets on a fridge, shaped like a peeled banana, an unpeeled banana, a strawberry, and a slice of mushroom pizza" id="clay-magnets-2" last={true} />
+            <p>
+                One really cool part of the cohort program is a ceramic group project - 20 or so of us worked together to build the pieces of a farm. I made a bunch of carrots, apples, a basket, a cabbage, and a frog, which would be used along with a market stand, crop field, and pond that others made.
+            </p>
+            <ZoomImage src={clayFarm1} alt="A bunch of unfired small clay carrots and apples, along with a basket, a cabbage, and a frog" id="clay-farm-1" first={true} />
+            <ZoomImage src={clayFarm2} alt="A collection of fired clay pieces, including a basket, carrots, apples, a cabbage, and a frog" id="clay-farm-2" />
+            <ZoomImage src={clayFarm3} alt="A ceramic pond with frogs and a duck on lilypads" id="clay-farm-3" />
+            <ZoomImage src={clayFarm4} alt="A ceramic farm stand with various baked goods, flowers, and fruit" id="clay-farm-4" />
+            <ZoomImage src={clayFarm5} alt="A ceramic crop field with carrots and a wheelbarrow" id="clay-farm-5" last={true} />
         </div>
         <div>
             <h2>Block Printing</h2>
