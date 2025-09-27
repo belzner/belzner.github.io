@@ -89,4 +89,49 @@ const boxShadowSize = '0.5rem';
         margin-right: 0;
     }
 }
+
+@media screen and (max-width: 680px) {
+    .section:not(.has-title) {
+        margin: 1rem;
+        width: 90%;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .has-title {
+        padding-top: 1.5rem;
+    }
+
+    .inner-section {
+        margin: 1.5rem;
+    }
+
+    .left {
+        .text-section {
+            margin-right: 1rem;
+        }
+    }
+
+    .right {
+        .text-section {
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .has-title {
+        padding-top: 1rem;
+    }
+
+    .inner-section {
+        padding: 1rem;
+    }
+}
 </style>
